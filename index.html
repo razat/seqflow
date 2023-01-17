@@ -1,0 +1,360 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <!-- Primary Meta Tags -->
+<title>Spider DataFlow</title>
+
+    <link href='styles.css' rel='stylesheet' type='text/css'>
+    <link href='flowy.min.css' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/7c5df40d37.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link
+      rel="stylesheet"
+      href="https://unpkg.com/papercss@1.9.1/dist/paper.min.css"
+    />
+
+    <script src="flowy.min.js"></script>
+    <script src="main.js"></script>   
+</head>
+<body>
+    <div id="navigation">
+        <div id="leftside">
+            <div id="details">
+            <div id="back"><img src="assets/database.svg"></div>
+            <div id="names">
+                <p id="title">Spider DataFlow</p>
+            </div>
+        </div>            
+        </div>
+        <div id="centerswitch">
+            <div id="leftswitch">Diagram view</div>
+            <div id="rightswitch">Code editor</div>
+        </div>
+        <div id="buttonsright">
+            <div id="discard">Schedule</div>
+            <div id="publish">Run</div>
+        </div>
+    </div>
+    <div id="leftcard">
+
+        <p id="header">Blocks</p>
+        <div id="search">
+            <img src="assets/search.svg">
+            <input type="text" placeholder="Search blocks">
+        </div>
+   <!--      <div id="subnav">
+            <div id="triggers" class="navactive side">Triggers</div>
+            <div id="actions" class="navdisabled side">Actions</div>
+            <div id="loggers" class="navdisabled side">Loggers</div>
+        </div> -->
+        <div id="blocklist">
+            <div class="blockelem create-flowy noselect">
+                <input type="hidden" name='blockelemtype' class="blockelemtype" value="1">
+                <div class="grabit"></div>
+                <div class="blockin">
+                    <div class="blockico">
+                        <span></span>
+                       <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="blocktext">
+                        <p class="blocktitle">Network Fetcher</p>
+                        <p class="blockdesc">Returns response from the network call</p>
+                    </div>
+                </div>
+            </div>
+            <div class="blockelem create-flowy noselect">
+                <input type="hidden" name='blockelemtype' class="blockelemtype" value="2">
+                <div class="grabit"></div>
+                <div class="blockin">
+                    <div class="blockico">
+                        <span></span>
+                        <i class="fa-solid fa-repeat"></i>
+                    </div>
+                    <div class="blocktext">
+                        <p class="blocktitle">Looper</p>
+                        <p class="blockdesc">Iterate next steps based on content flow</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="blockelem create-flowy noselect">
+                <input type="hidden" name='blockelemtype' class="blockelemtype" value="6">
+                <div class="grabit"></div>
+                <div class="blockin">
+                    <div class="blockico">
+
+                        <span></span>
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    <div class="blocktext">
+                        <p class="blocktitle">Transforming with Pandas</p>
+                        <p class="blockdesc">Transform data extracted using Pandas code</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="blockelem create-flowy noselect">
+                <input type="hidden" name='blockelemtype' class="blockelemtype" value="3">
+                <div class="grabit"></div>
+                <div class="blockin">
+                    <div class="blockico">
+
+                        <span></span>
+                        <i class="fa-solid fa-superscript"></i>
+                    </div>
+                    <div class="blocktext">
+                        <p class="blocktitle">Xpath extractor</p>
+                        <p class="blockdesc">Extract data from network response using xpath query</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="blockelem create-flowy noselect">
+                <input type="hidden" name='blockelemtype' class="blockelemtype" value="4">
+                <div class="grabit"></div>
+                <div class="blockin">
+                    <div class="blockico">
+
+                        <span></span>
+                        <i class="fa-brands fa-css3"></i>
+                    </div>
+                    <div class="blocktext">
+                        <p class="blocktitle">CSS extractor</p>
+                        <p class="blockdesc">Extract data from network response using css query</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="blockelem create-flowy noselect">
+                <input type="hidden" name='blockelemtype' class="blockelemtype" value="6">
+                <div class="grabit"></div>
+                <div class="blockin">
+                    <div class="blockico">
+
+                        <span></span>
+                        <i class="fa-brands fa-square-js"></i>
+                    </div>
+                    <div class="blocktext">
+                        <p class="blocktitle">Extract JSON</p>
+                        <p class="blockdesc">Extract JSON data from network call</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blockelem create-flowy noselect">
+                <input type="hidden" name='blockelemtype' class="blockelemtype" value="5">
+                <div class="grabit"></div>
+                <div class="blockin">
+                    <div class="blockico">
+
+                        <span></span>
+                       <i class="fa-solid fa-arrows-down-to-line"></i>
+                    </div>
+                    <div class="blocktext">
+                        <p class="blocktitle">Google Bucket</p>
+                        <p class="blockdesc">Put data in csv format in Google bucket</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="blockelem create-flowy noselect">
+                <input type="hidden" name='blockelemtype' class="blockelemtype" value="7">
+                <div class="grabit"></div>
+                <div class="blockin">
+                    <div class="blockico">
+
+                        <span></span>
+                        <i class="fa-solid fa-list"></i>
+                    </div>
+                    <div class="blocktext">
+                        <p class="blocktitle">Distributor</p>
+                        <p class="blockdesc">Run spider in distributed units</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="blockelem create-flowy noselect">
+                <input type="hidden" name='blockelemtype' class="blockelemtype" value="8">
+                <div class="grabit"></div>
+                <div class="blockin">
+                    <div class="blockico">
+
+                        <span></span>
+                        <i class="fa-solid fa-upload"></i>
+                    </div>
+                    <div class="blocktext">
+                        <p class="blocktitle">Task Queue pusher</p>
+                        <p class="blockdesc">Push data to task queue to be picked up at later time</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blockelem create-flowy noselect">
+                <input type="hidden" name='blockelemtype' class="blockelemtype" value="9">
+                <div class="grabit"></div>
+                <div class="blockin">
+                    <div class="blockico">
+
+                        <span></span>
+                        <i class="fa-solid fa-download"></i>
+                    </div>
+                    <div class="blocktext">
+                        <p class="blocktitle">Task Queue fetcher</p>
+                        <p class="blockdesc">Fetch data from task queue</p>
+                    </div>
+                </div>
+            </div>
+
+           <div class="blockelem create-flowy noselect">
+                <input type="hidden" name='blockelemtype' class="blockelemtype" value="5">
+                <div class="grabit"></div>
+                <div class="blockin">
+                    <div class="blockico">
+
+                        <span></span>
+                       <i class="fa-solid fa-arrows-down-to-line"></i>
+                    </div>
+                    <div class="blocktext">
+                        <p class="blocktitle">Melted Schema</p>
+                        <p class="blockdesc">Convert data to melted schema with unique identifier</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blockelem create-flowy noselect">
+                <input type="hidden" name='blockelemtype' class="blockelemtype" value="10">
+                <div class="grabit"></div>
+                <div class="blockin">
+                    <div class="blockico">
+
+                        <span></span>
+                        <i class="fa-solid fa-hourglass-start"></i>
+                    </div>
+                    <div class="blocktext">
+                        <p class="blocktitle">Delay </p>
+                        <p class="blockdesc">Trigger next processor with delay</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="footer">
+          
+        </div>
+    </div>
+    <div id="propwrap" class="card" style="min-width:380px"> 
+        <div id="properties" class="card-body" style="min-width:380px" >
+            <div id="close">
+                <img src="assets/close.svg">
+            </div>
+            <p id="header2">Properties</p>
+             <div id="proplist ">
+                    <div class="form-group">
+                            <label for="paperInputs1">Process Name</label>
+                            <input type="text" style="min-width: 300px;" placeholder="Name" id="processName">
+
+                    </div>
+
+                <div div id="processor-1"  class="noshow processor" >
+                    <div class="form-group">
+                            <label for="paperInputs1">API Verb</label>
+                            <button class="btn-warning">POST</button>
+                            <button class="btn-warning">GET</button>
+                    </div>
+                    <div class="form-group">
+                            <label for="paperInputs1">URL </label>
+                            <input type="text" style="min-width: 300px;" placeholder="https://toscrapeurl.com/" id="paperInputs1">
+
+                    </div>
+                    <div class="form-group">
+                      <label for="large-input">Headers </label>
+                      <textarea id="large-input" style="min-width: 300px;" placeholder="Rows are separated by newline \n Content-Type:application/json"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="paperInputs1">Proxy </label>
+                        <input type="text" style="min-width: 300px;" placeholder="Proxy details" id="paperInputs1">
+                    </div>
+                    <div class="form-group">
+                      <label for="large-input">Payload</label>
+                      <textarea id="large-input" style="min-width: 300px;" placeholder='{"sku" : "2322", pageSize: 50, pageNum: 5}'></textarea>
+                    </div>
+
+            </div>
+                            <div div id="processor-2"  class="noshow processor">
+
+                    <div class="form-group">
+                            <label for="paperInputs1">Loop base</label>
+                            <button class="btn-warning">Static</button>
+                            <button class="btn-warning">Dynamic</button>
+                    </div>
+                    <div class="form-group">
+                            <label for="paperInputs1">Inflow Field</label>
+                            <input type="text" style="min-width: 300px;" placeholder="Variable name" id="paperInputs1">
+
+                    </div>
+
+
+            </div>
+                <div id="processor-3"  class="noshow processor">
+
+  
+                    <div class="form-group">
+                            <label for="paperInputs1">XPath Selector</label>
+                            <input type="text" style="min-width: 300px;" placeholder='div#myid + a.myclass[href*="example.net"]' id="paperInputs1">
+                    </div>
+                </div>  
+
+
+                    <div id="processor-4"  class="noshow processor">
+
+  
+                    <div class="form-group">
+                            <label for="paperInputs1">CSS Selector</label>
+                            <input type="text" style="min-width: 300px;" placeholder="/bookstore/book/price[text()]" id="paperInputs1">
+                    </div>
+                </div> 
+
+
+
+                <div id="processor-6"  class="noshow processor">
+
+
+                    <div class="form-group">
+                      <label for="large-input">Pandas code</label>
+                      <textarea id="large-input" style="min-width: 300px; min-height: 400px;" placeholder="">                import pandas as pd
+                            table_MN = pd.read_html(response.body)         
+            
+                    </textarea>
+                        <h6 >Inflow data can be accessed using response variable</h6>
+                    </div>
+
+                </div> 
+
+
+
+
+            </div>
+            <h6>(Note: for dynamic values from previous flow use variable name like ${var})</h6>
+                    <button id="removeblock" class="btn-block btn-secondary" type="button">Save</button>
+
+            </div>
+
+        </div>
+    </div>
+    <div id="canvas">
+    </div>
+</body>
+</html>
